@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import {scroller} from 'react-scroll';
+
+//Component imports
+import PageContainer from './components/pagecontainer/pagecontainer-component';
+import Header from './components/header/header.component';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  scrollToWithContainer(destination) {
+      scroller.scrollTo(destination, {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart',
+        containerId: 'scroll-container'
+      });
+  }
+
+  render () {
+    return (
+      
+      <div className="App">
+        <Header scroll={this.scrollToWithContainer} />
+        <PageContainer/>
+        
+      </div>
+    );
+  }
 }
 
 export default App;

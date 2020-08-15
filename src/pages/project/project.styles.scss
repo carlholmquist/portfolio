@@ -1,0 +1,52 @@
+.projects-overview-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .projects-image-background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../../assets/DSC_0557.jpeg);
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        opacity: 80%;
+      }
+
+    .projects-header{
+        margin: 0px 15vw;
+        margin-top: 40px;
+        width: 70vw;
+        height: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        list-style: none;
+
+        span {
+            cursor: pointer;
+            margin: 20px 0px;
+            width: 70px;
+
+            &:hover{
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    .projects-overview {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 80%;
+        }
+    
+}
